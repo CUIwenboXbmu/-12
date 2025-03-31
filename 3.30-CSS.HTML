@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Segoe UI', system-ui;
+            margin: 0;
+            line-height: 1.6;
+            background: #f0f2f5;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-link {
+            color: #ecf0f1;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        /* 卡片容器 */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 100px auto 40px;
+        }
+
+        /* 表格样式 */
+        .theory-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        .theory-table th {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        .theory-table td {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .theory-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .theory-table tr:hover {
+            background: #f1f4f7;
+        }
+
+        /* 表单交互 */
+        input[type="email"] {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #bdc3c7;
+            border-radius: 6px;
+            margin-right: 10px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="email"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 8px rgba(52,152,219,0.3);
+        }
+        button {
+            background: #3498db;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(41,128,185,0.3);
+        }
+
+        /* 图片悬停效果 */
+        .theory-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .theory-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="nav-link">首页</a>
+        <a href="#theory" class="nav-link">理论体系</a>
+        <a href="#case" class="nav-link">研究案例</a>
+        <a href="#resource" class="nav-link">学术资源</a>
+    </nav>
+    <div class="card">
+        <h1>社会学的核心概念</h1>
+        <p>社会学研究人类在社会关系中的行为模式，主要理论包括：</p>
+        
+        <ol>
+            <li>结构功能主义</li>
+            <li>社会冲突论</li>
+            <li>符号互动论</li>
+        </ol>
+
+        <div class="theory-section">
+            <h2>经典理论体系</h2>
+            <img src="th.jpg" alt="社会结构示意图" class="theory-img">
+            
+            <table class="theory-table">
+                <tr>
+                    <th>理论</th>
+                    <th>代表人物</th>
+                    <th>核心观点</th>
+                </tr>
+                <tr>
+                    <td>结构功能主义</td>
+                    <td>帕森斯</td>
+                    <td>社会各部分协同维持整体稳定</td>
+                </tr>
+                <tr>
+                    <td>冲突理论</td>
+                    <td>马克思</td>
+                    <td>社会资源分配的不平等引发矛盾</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="theory-section">
+            <h2 id="case">研究案例</h2>
+            <img src="case-study.jpg" alt="社区调研照片" class="theory-img">
+            
+            <table class="theory-table">
+                <tr>
+                    <th>案例名称</th>
+                    <th>研究方法</th>
+                    <th>主要发现</th>
+                </tr>
+                <tr>
+                    <td>城中村社会网络</td>
+                    <td>田野调查+社会网络分析</td>
+                    <td>强地域性社交网络支撑社区运行</td>
+                </tr>
+                <tr>
+                    <td>互联网社交行为</td>
+                    <td>大数据分析+深度访谈</td>
+                    <td>虚拟身份强化现实社交焦虑</td>
+                </tr>
+            </table>
+            
+            <p>典型案例说明：通过为期6个月的田野调查，我们发现城中村居民通过...</p>
+        </div>
+
+        <div class="resource-form">
+            <h3>获取研究资料</h3>
+            <form action="/submit">
+                <input type="email" placeholder="请输入邮箱">
+                <button type="submit">订阅期刊</button>
+            </form>
+        </div>
+    </div>
+</body>
+<style>
+    .card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 2rem;
+        max-width: 800px;
+        margin: 40px auto;
+    }
+
+    .theory-img {
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid #dee2e6;
+        margin: 20px 0;
+    }
+
+    .theory-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+    }
+
+    .theory-table th {
+        background: #343a40;
+        color: white;
+        padding: 12px;
+    }
+
+    .theory-table td {
+        padding: 12px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .resource-form {
+        background: #e9ecef;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+
+    button {
+        background: #228be6;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</html>
+
+<img src="https://p5.ssl.qhimgs1.com/t011e290a5d699d1cdf.jpg" alt="城中村社会网络示意图" class="theory-img">
